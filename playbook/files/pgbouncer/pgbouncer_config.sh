@@ -32,10 +32,8 @@ host    all             all                0.0.0.0/0                md5
 #### collect users from PostgreSQL
 # SELECT usename, passwd FROM pg_shadow WHERE usename=$1
 # follow the example below:
-echo '# users postgresql
-"zeus" "md58fc78449e5093d85d420ef1906eed03e"
-"sbtest" "md5b3c59132f46738cebcdccb087d7f751b"
-' > /etc/pgbouncer/userlist.txt
+echo '"zeus" "md58fc78449e5093d85d420ef1906eed03e"
+"sbtest" "md5b3c59132f46738cebcdccb087d7f751b"' > /etc/pgbouncer/userlist.txt
 
 systemctl enable pgbouncer
 systemctl restart pgbouncer
